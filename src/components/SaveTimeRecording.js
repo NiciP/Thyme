@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { saveTime } from "../modules/saveTimeSheet";
 import TimeInputForm from "./TimeInputForm";
 import { Form, Button, Grid } from "semantic-ui-react";
+import DisplayTimesheets from "./DisplayTimesheets";
 
 class SaveTimeRecording extends Component {
 	constructor(props) {
@@ -85,6 +86,7 @@ class SaveTimeRecording extends Component {
 							{saveButton}
 						</Form.Group>
 					</Grid>
+						<DisplayTimesheets />
 				</Grid>
 			</div>
 		);

@@ -39,6 +39,30 @@ const saveTime = async (begin, end) => {
 	} catch (error) {
 		return error
 	}
-};	
+};
 
-export { saveTime };
+const getData = () => {
+	const apiUrl = "https://demo-stable.kimai.org/api/";
+  // const headers = JSON.parse(sessionStorage.getItem(["credentials"]));
+	const path = apiUrl + "/timesheets";
+	let headers = {
+		"X-AUTH-USER": "susan_super",
+		"X-AUTH-TOKEN": "api_kitten",
+		"Access-Control-Allow-Origin": "*",
+		Accept: "application/json",
+		"Content-Type": "application/json"
+	};
+  return new Promise((resolve, reject) => {
+    axios
+      .get(path, {
+				headers: headers,
+				mode: "cors"
+			})
+
+      .then(response => {
+        resolve(response);
+      });
+  });
+};
+
+export { saveTime, getData };
