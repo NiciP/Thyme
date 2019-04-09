@@ -67,11 +67,11 @@ code {
 	margin-left: 45px;
 	background-color: #5cb695;
 }
-
+/* 
 .viewDiv{
-	width: 1000px;
-}
-
+	width: 1500px;
+} */
+/*
 .itemData{
 	margin-right: 50px;
 	padding-right: 10px;
@@ -82,11 +82,11 @@ code {
 	margin-left: 40px;
 	padding-right: 10px;
 	padding-left: 20px;
-	/* vertical-align: super; */
+	align-items: baseline;
 }
 
 .itemActivity{
 	margin-left: 5px;
 	padding-right: 10px;
 	padding-left: 20px;
-}
+} */

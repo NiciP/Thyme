@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../index.css';
 import moment from 'moment-timezone';
+import { Table } from 'semantic-ui-react'
 
 class ViewTimeForm extends Component {
 	constructor(props) {
@@ -44,13 +45,31 @@ class ViewTimeForm extends Component {
 				<div>
 					{timesheets.map((item, index) => {
 						return (
+
 							<div key={index}>
-								<label className="itemData">{ moment(item.begin).tz('Europe/Stockholm').format('YYYY-MM-DD HH:mm A') } </label>
-								<label className="itemData">{ moment(item.end).tz('Europe/Stockholm').format('YYYY-MM-DD HH:mm A') } </label>
-								<label className="itemData">{item.duration}</label>
-								<label className="itemProject">{item.project}</label>
-								<label className="itemActivity">{item.activity}</label>
+								<Table>
+									
+									 <Table.Header>
+										<Table.Row>
+											<Table.Cell><label>{moment(item.begin).tz('Europe/Stockholm').format('YYYY-MM-DD HH:mm A')} </label></Table.Cell>
+											</Table.Row>
+											  </Table.Header>
+												<Table.Body>
+											<Table.Row>
+											<Table.Cell><label>{moment(item.end).tz('Europe/Stockholm').format('YYYY-MM-DD HH:mm A')}  </label></Table.Cell>
+											</Table.Row>
+											<Table.Row><Table.Cell>{item.duration}</Table.Cell>
+											</Table.Row>
+											<Table.Row>
+											<Table.Cell>{item.project}</Table.Cell>
+											</Table.Row>
+											<Table.Row>
+											<Table.Cell>{item.activity}</Table.Cell>
+											</Table.Row>
+									</Table.Body>
+								</Table>
 							</div>
+
 						);
 					})}
 				</div>
