@@ -9,7 +9,6 @@ class ViewTimeForm extends Component {
 
 	render() {
 		const timesheets = this.props.timesheets;
-		const projectName = this.props.projectName;
 		const items = [
 			{
 				name: "START TIME"
@@ -33,13 +32,12 @@ class ViewTimeForm extends Component {
 				<div>
 					{items.map((item, index) => {
 						return (
-							<div key={index} >
+							<div key={index}>
 								<label className="itemTitle">{item.name}</label>
 							</div>
 						);
 					})}
 				</div>
-				<div>
 				<div className="timesheet">
 				{timesheets.map((item, index) => {
 						return (
@@ -60,8 +58,7 @@ class ViewTimeForm extends Component {
 							</div>
 						);
 					})}
-				</div>
-				</div>
+			</div>
 			</div>
 		);
 	}

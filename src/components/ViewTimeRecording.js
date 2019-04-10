@@ -21,7 +21,6 @@ class ViewTimeRecording extends Component {
 	}
 
 	async magic(unFilteredTimesheets, unFilteredProjects, unFilteredActivities) {
-		debugger;
 
 		const projectsFiltered = unFilteredTimesheets.map(time => {
 			unFilteredProjects.filter(projects => {

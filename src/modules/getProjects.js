@@ -4,10 +4,14 @@ const getProjects= async (id) => {
 	const apiUrl = "https://demo.kimai.org/api/";
 	const path = apiUrl + 'projects/${id}';
 
+	const user = JSON.parse(sessionStorage.current_user).username
+	const password = JSON.parse(sessionStorage.current_user).password
+
 	let headers = {
-		"X-AUTH-USER": "susan_super",
-		"X-AUTH-TOKEN": "api_kitten",
+			"X-AUTH-USER": user,
+			"X-AUTH-TOKEN": password,
 	};
+
 	try {
 		const resp = await axios.get(path, {
 			headers: headers,

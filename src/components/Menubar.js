@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Button, Grid, Menu, Sidebar, Segment } from "semantic-ui-react";
-import { IoIosMenu } from "react-icons/io";
+import { IoIosMenu, IoMdPerson, IoIosTimer } from "react-icons/io";
 import logo from "../image/image.png";
 import SaveTimeRecording from "./SaveTimeRecording";
-import ViewTimeRecording from './ViewTimeRecording'
+import ViewTimeRecording from "./ViewTimeRecording";
 
 class Menubar extends Component {
 	constructor(props) {
@@ -25,7 +25,7 @@ class Menubar extends Component {
 					style={{ background: "#5bb695", width: "60px", height: "995px" }}
 				>
 					<Button
-						id='menuicon'
+						id="menuicon"
 						disabled={visible}
 						onClick={this.handleShowClick}
 						style={{ background: "#5bb695", padding: 0, marginLeft: 7 }}
@@ -51,37 +51,65 @@ class Menubar extends Component {
 							src={logo}
 							alt="logo"
 							style={{
-								marginLeft: "27px",
+								marginLeft: "10px",
 								paddingTop: "20px",
-								marginBottom: "25px",
-								width: "207px",
-								height: "135px"
+								marginBottom: "45px",
+								width: "260px",
+								height: "140px"
 							}}
 						/>
 					</div>
-
-					<p id="login_message" style={{ color: '#354151', textAlign: 'center' }}>
-						Welcome, {this.props.user.toUpperCase()}
-					</p>
+					<div
+						style={{
+							overflow: "hidden",
+							marginBottom: "20px",
+							marginLeft: "35px",
+							color: "#354151"
+						}}
+					>
+						<IoMdPerson
+							size={20}
+							style={{ marginRight: "10px", float: "left" }}
+						/>
+						<p
+							id="login_message"
+							style={{ color: "#354151", textAlign: "center", float: "left" }}
+						>
+							Welcome, {this.props.user.toUpperCase()}
+						</p>
+					</div>
 					<Menu.Item
 						className="item"
 						as="a"
 						style={{
 							background: "#dbdbdf",
-							marginBottom: "10px",
-							width: "80%",
-							marginLeft: "10%"
+							marginBottom: "1px",
+							height: "60px",
+							marginLeft: "2%",
+							width: "96%",
+							textAlign: "center",
+							verticalAlign: "middle",
+							color: "#354151",
+							fontSize: "20px"
 						}}
 					>
-						Tab1
+						<IoIosTimer
+							size={30}
+							style={{ marginBottom: "20px", float: "left", marginLeft: "30px" }}
+						/>
+						Activity Timer
 					</Menu.Item>
 					<Menu.Item
 						as="a"
 						style={{
 							background: "#dbdbdf",
-							marginBottom: "10px",
-							width: "80%",
-							marginLeft: "10%"
+							marginBottom: "1px",
+							height: "60px",
+							marginLeft: "2%",
+							width: "96%",
+							verticalAlign: "middle",
+							color: "#354151",
+							fontSize: "20px",
 						}}
 					>
 						Tab2
@@ -90,9 +118,14 @@ class Menubar extends Component {
 						as="a"
 						style={{
 							background: "#dbdbdf",
-							marginBottom: "10px",
-							width: "80%",
-							marginLeft: "10%"
+							marginBottom: "1px",
+							height: "60px",
+							marginLeft: "2%",
+							width: "96%",
+							textAlign: "center",
+							verticalAlign: "middle",
+							color: "#354151",
+							fontSize: "20px"
 						}}
 					>
 						Tab3
@@ -101,9 +134,14 @@ class Menubar extends Component {
 						as="a"
 						style={{
 							background: "#dbdbdf",
-							marginBottom: "10px",
-							width: "80%",
-							marginLeft: "10%"
+							marginBottom: "1px",
+							height: "60px",
+							marginLeft: "2%",
+							width: "96%",
+							textAlign: "center",
+							verticalAlign: "middle",
+							color: "#354151",
+							fontSize: "20px"
 						}}
 					>
 						Tab4
@@ -112,20 +150,25 @@ class Menubar extends Component {
 						as="a"
 						style={{
 							background: "#dbdbdf",
-							marginBottom: "10px",
-							width: "80%",
-							marginLeft: "10%"
+							marginBottom: "1px",
+							height: "60px",
+							marginLeft: "2%",
+							width: "96%",
+							textAlign: "center",
+							verticalAlign: "middle",
+							color: "#354151",
+							fontSize: "20px"
 						}}
 					>
 						Tab5
 					</Menu.Item>
 				</Sidebar>
-				<div >
+				<div>
 					<Segment basic>
 						<SaveTimeRecording />
 					</Segment>
 				</div>
-				<div style={{ paddingTop: '70px' }}>
+				<div style={{ paddingTop: "70px" }}>
 					<Segment basic>
 						<ViewTimeRecording />
 					</Segment>
