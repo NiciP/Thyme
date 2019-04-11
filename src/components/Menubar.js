@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Grid, Menu, Sidebar, Segment } from "semantic-ui-react";
-import { IoIosMenu, IoMdPerson, IoIosTimer } from "react-icons/io";
+import { IoIosMenu, IoMdPerson, IoIosTimer, IoIosStats, IoIosDocument } from "react-icons/io";
 import logo from "../image/image.png";
 import SaveTimeRecording from "./SaveTimeRecording";
 import ViewTimeRecording from "./ViewTimeRecording";
@@ -87,7 +87,6 @@ class Menubar extends Component {
 							height: "60px",
 							marginLeft: "2%",
 							width: "96%",
-							textAlign: "center",
 							verticalAlign: "middle",
 							color: "#354151",
 							fontSize: "20px"
@@ -95,7 +94,7 @@ class Menubar extends Component {
 					>
 						<IoIosTimer
 							size={30}
-							style={{ marginBottom: "20px", float: "left", marginLeft: "30px" }}
+							style={{ paddingBottom: "3px", float: "left", marginLeft: "15px", marginRight: "15px" }}
 						/>
 						Activity Timer
 					</Menu.Item>
@@ -107,12 +106,15 @@ class Menubar extends Component {
 							height: "60px",
 							marginLeft: "2%",
 							width: "96%",
-							verticalAlign: "middle",
 							color: "#354151",
 							fontSize: "20px",
 						}}
-					>
-						Tab2
+						>
+						<IoIosStats
+						size={30}
+						style={{ paddingBottom: "3px", float: "left", marginLeft: "15px", marginRight: "15px" }}
+					/>
+						Dashboard
 					</Menu.Item>
 					<Menu.Item
 						as="a"
@@ -122,45 +124,16 @@ class Menubar extends Component {
 							height: "60px",
 							marginLeft: "2%",
 							width: "96%",
-							textAlign: "center",
 							verticalAlign: "middle",
 							color: "#354151",
 							fontSize: "20px"
 						}}
 					>
-						Tab3
-					</Menu.Item>
-					<Menu.Item
-						as="a"
-						style={{
-							background: "#dbdbdf",
-							marginBottom: "1px",
-							height: "60px",
-							marginLeft: "2%",
-							width: "96%",
-							textAlign: "center",
-							verticalAlign: "middle",
-							color: "#354151",
-							fontSize: "20px"
-						}}
-					>
-						Tab4
-					</Menu.Item>
-					<Menu.Item
-						as="a"
-						style={{
-							background: "#dbdbdf",
-							marginBottom: "1px",
-							height: "60px",
-							marginLeft: "2%",
-							width: "96%",
-							textAlign: "center",
-							verticalAlign: "middle",
-							color: "#354151",
-							fontSize: "20px"
-						}}
-					>
-						Tab5
+						<IoIosDocument
+							size={30}
+							style={{ paddingBottom: "3px", float: "left", marginLeft: "15px", marginRight: "15px" }}
+						/>
+						Reports
 					</Menu.Item>
 				</Sidebar>
 				<div>
